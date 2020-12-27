@@ -1,0 +1,186 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TraineesController extends Controller
+{
+    //
+    public function trainees(){
+        $Students = $this->array();
+        return view('trainees',compact('Students'));
+    }
+    public function trainee($id){
+        $Students = $this->array()[$id];
+        return view('trainee')->with('Student',$Students);
+    }
+    public function summary(){
+        return view('summary');
+    }
+    public function report(){
+        return view('report');
+    }
+    public function gallery(){
+        return view('gallery');
+    }
+    public function dashboard(){
+        return view('dashboard');
+    }
+    
+    public function array(){
+        $main = array(
+            array('id'=>0,
+                'name'          =>"Adam",
+                  'birthday'      =>"14 June",
+                  'image'          =>"https://img.favpng.com/2/24/0/computer-icons-avatar-user-profile-png-favpng-HPjiNes3x112h0jw38sbfpDY9.jpg",
+                  'github account' =>"https://github.com/oca-class-b",
+                  'linkedin'       =>"https://www.linkedin.com/feed/",
+                  'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                           'is_completed'        =>"yes"),
+                                           array('project_name'  =>"Wordpress",
+                                           'is_completed'        =>"no"), ),
+                  'attendace'        =>array(array('check_in'    =>"15 Dec 2020 09:00",
+                                                  'check_out'    =>"15 Dec 2020 16:00"),
+                                            array('check_in'     =>"14 Dec 2020 08:00",
+                                                  'check_out'    =>"14 Dec 2020 14:00"), ),
+                 ),
+            array('id'=>1,
+                'name'          =>"roaa",
+                 'birthday'       =>"24-8",
+                  'image'         =>'https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg',
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"15 Dec 2020 09:00",
+                                                 'check_out'    =>"15 Dec 2020 16:00"),
+                                           array('check_in'     =>"14 Dec 2020 08:00",
+                                                 'check_out'    =>"14 Dec 2020 14:00"), ),
+                ),
+                array('id'=>2,
+                'name'          =>"laith zayed",
+                 'birthday'       =>"29-10",
+                 'image'          =>"https://img.favpng.com/2/24/0/computer-icons-avatar-user-profile-png-favpng-HPjiNes3x112h0jw38sbfpDY9.jpg",
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"30 Dec 2020 09:00",
+                                                 'check_out'    =>"31 Dec 2020 16:00"),
+                                           array('check_in'     =>"10 Dec 2020 08:00",
+                                                 'check_out'    =>"26 Dec 2020 14:00"), ),
+                ),
+                array('id'=>3,
+                'name'          =>"hana",
+                 'birthday'       =>"3-8",
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'image'         =>'https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg',
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"9 Dec 2020 09:00",
+                                                 'check_out'    =>"11 Dec 2020 16:00"),
+                                           array('check_in'     =>"1 Dec 2020 08:00",
+                                                 'check_out'    =>"10 Dec 2020 14:00"), ),
+                ),
+                array('id'=>4,
+                'name'          =>"lana",
+                 'birthday'       =>"1-8",
+                 'image'         =>'https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg',
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"4 Dec 2020 09:00",
+                                                 'check_out'    =>"9 Dec 2020 16:00"),
+                                           array('check_in'     =>"1 Dec 2020 08:00",
+                                                 'check_out'    =>"11 Dec 2020 14:00"), ),
+                ),
+                array('id'=>5,
+                'name'          =>"Tala",
+                 'birthday'       =>"2-8",
+                 'image'         =>'https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg',
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"11 Dec 2020 09:00",
+                                                 'check_out'    =>"16 Dec 2020 16:00"),
+                                           array('check_in'     =>"11 Dec 2020 08:00",
+                                                 'check_out'    =>"30 Dec 2020 14:00"), ),
+                ),
+                array('id'=>6,
+                'name'          =>"ayham",
+                 'birthday'       =>"1-5",
+                 'image'          =>"https://img.favpng.com/2/24/0/computer-icons-avatar-user-profile-png-favpng-HPjiNes3x112h0jw38sbfpDY9.jpg",
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"26 Dec 2020 09:00",
+                                                 'check_out'    =>"30 Dec 2020 16:00"),
+                                           array('check_in'     =>"8 Dec 2020 08:00",
+                                                 'check_out'    =>"16 Dec 2020 14:00"), ),
+                ),
+                array('id'=>7,
+                'name'          =>"Aya",
+                 'birthday'       =>"9-8",
+                 'image'         =>'https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg',
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"9 Dec 2020 09:00",
+                                                 'check_out'    =>"11 Dec 2020 16:00"),
+                                           array('check_in'     =>"10 Dec 2020 08:00",
+                                                 'check_out'    =>"14 Dec 2020 14:00"), ),
+                ),
+                array('id'=>8,
+                'name'          =>"Ahmed",
+                 'birthday'       =>"31-12",
+                 'image'          =>"https://img.favpng.com/2/24/0/computer-icons-avatar-user-profile-png-favpng-HPjiNes3x112h0jw38sbfpDY9.jpg",
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"9 Dec 2020 09:00",
+                                                 'check_out'    =>"7 Dec 2020 16:00"),
+                                           array('check_in'     =>"1 Dec 2020 08:00",
+                                                 'check_out'    =>"4 Dec 2020 14:00"), ),
+                ),
+                array('id'=>9,
+                'name'          =>"dania",
+                 'birthday'       =>"4-7",
+                 'image'         =>'https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg',
+                 'github account' =>"https://github.com/oca-class-b",
+                 'linkedin'       =>"https://www.linkedin.com/feed/",
+                 'project'        =>array(array('project_name'  =>"HTML & CSS",
+                                          'is_completed'        =>"yes"),
+                                          array('project_name'  =>"Wordpress",
+                                          'is_completed'        =>"no"), ),
+                 'attendace'        =>array(array('check_in'    =>"12 Dec 2020 09:00",
+                                                 'check_out'    =>"18 Dec 2020 16:00"),
+                                           array('check_in'     =>"10 Dec 2020 08:00",
+                                                 'check_out'    =>"11 Dec 2020 14:00"), ),
+                ),
+                    );
+                    return($main);
+    }
+}
